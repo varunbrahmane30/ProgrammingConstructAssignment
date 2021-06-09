@@ -46,3 +46,18 @@ do
 	done
 done
 echo "Discending order: " ${array[@]}
+
+
+for (( i=0;i<${#array[@]};i++ ))
+do
+	for (( j=$i;j<${#array[@]};j++ ))
+	do
+		if [[ ${array[$i]} -gt ${array[$j]} ]]
+		then
+			temp=${array[$i]}
+			array[$i]=${array[$j]}
+			array[$j]=$temp
+		fi
+	done
+done
+echo "Ascending order: " ${array[@]}
