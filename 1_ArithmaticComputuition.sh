@@ -20,3 +20,13 @@ echo $result1;
 echo $result2;
 echo $result3;
 echo $result4;
+
+declare -A dict
+
+dict[1]=$result1
+dict[2]=$result2
+dict[3]=$result3
+dict[4]=$result4
+
+echo "Dictionary Elemnts are :: " ${dict[@]}
+
